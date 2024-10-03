@@ -1,0 +1,606 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  background-color: #1f327f;
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #3650b8;
+  box-shadow: 2px 2px 5px black;
+  z-index: 999;
+}
+
+.logo h3 {
+  color: white;
+  word-spacing: 5px;
+  padding-top: 2px;
+}
+
+.logo h3::after {
+  content: "";
+  display: block;
+  background-color: white;
+  padding-bottom: 2px;
+  width: 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding-top: 2px;
+}
+
+nav ul li a::after {
+  content: "";
+  border-bottom: 2px solid white;
+  display: block;
+  padding-bottom: 2px;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(0.8);
+}
+
+.icon {
+  width: 28px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+  cursor: pointer;
+}
+
+.icon span {
+  width: 28px;
+  height: 3px;
+  background-color: white;
+}
+
+/* navbar end */
+
+.home {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  background-color: #1f327f;
+}
+
+.text {
+  color: white;
+  max-width: 500px;
+  margin-left: 30px;
+}
+
+.text h1 {
+  font-size: 5rem;
+  text-shadow: 2px 2px 5px #3650b8;
+  line-height: 80px;
+}
+
+.text .h2 {
+  margin-top: 0px;
+  overflow: hidden;
+}
+.text .h2 span {
+  font-size: 2rem;
+  position: relative;
+}
+
+.text .h2 span:nth-child(2)::before {
+  content: "";
+  border-left: 2px solid white;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #1f327f;
+  position: absolute;
+  animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate {
+  40%,
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.text p {
+  width: 300px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.text a button {
+  padding: 10px;
+  background-color: rgb(24, 123, 221);
+  margin-top: 15px;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px black;
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.text a button:active {
+  transform: scale(0.8);
+}
+
+.text a button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  position: absolute;
+  background-color: #3650b8;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transition: 0.5s;
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+.text a button:hover::before {
+  transform: scaleX(1);
+}
+
+.social-media {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.social-media a {
+  font-size: 2rem;
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3650b8;
+  padding: 8px;
+  border-radius: 50%;
+  transition: 0.5s;
+  color: white;
+}
+
+.social-media a:hover {
+  background-color: rgba(255, 255, 255, 0.226);
+}
+
+.social-media a:active {
+  transform: scale(0.8);
+}
+.home img {
+  width: 400px;
+  height: 400px;
+  z-index: 4;
+}
+.dekorasi {
+  width: 300px;
+  height: 300px;
+  background-color: rgb(0, 162, 255);
+  position: absolute;
+  right: 20px;
+  z-index: 2;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.dekorasi-1 {
+  width: 250px;
+  height: 250px;
+  background-color: rgb(0, 162, 255);
+  position: absolute;
+  right: 150px;
+  bottom: 100px;
+  z-index: 1;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+/* home end */
+
+.about {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #3650b8;
+  padding: 100px 0;
+}
+
+.foto {
+  width: 350px;
+  height: 350px;
+  background-color: rgb(0, 162, 255);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px dashed white;
+  box-shadow: 2px 2px 5px black;
+  margin: 0 30px;
+}
+
+.foto img {
+  width: 310px;
+  height: 330px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.452);
+  margin: 10px;
+}
+
+.content-text {
+  width: 400px;
+  height: 400px;
+  border-left: 3px solid white;
+}
+
+.content-text h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 50px;
+}
+
+.content-text h2 span {
+  color: chocolate;
+}
+
+.content-text p {
+  color: white;
+  margin: 0 30px;
+  text-indent: 20px;
+  text-transform: capitalize;
+  line-height: 20px;
+}
+
+.tim {
+  width: 100%;
+  margin: 100px 0;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tim h2 {
+  color: white;
+  position: absolute;
+  top: -80px;
+}
+
+.tim h2 span {
+  color: chocolate;
+}
+
+.box1 {
+  width: 300px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.596);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  margin-left: 15px;
+}
+
+.container-img {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.container-img::before {
+  content: "Ahmad Bahrul Ulum";
+  color: white;
+  text-align: center;
+  line-height: 300px;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.411);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: 2;
+  transform: translateY(300px);
+  transition: 0.6s;
+}
+.container-img:hover::before {
+  transform: translateY(0);
+}
+.container-img.img-1::before {
+  content: "Risa Maryamus";
+}
+.container-img.img-2::before {
+  content: "Alvin Nando Erik Saputra";
+}
+
+.box1 img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: #3650b8;
+  position: relative;
+}
+
+.box1 a button {
+  background-color: #3650b8;
+  padding: 15px;
+  margin-top: 30px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 2px 2px 3px black;
+  position: relative;
+  z-index: 1;
+}
+
+.box1 a button:active {
+  transform: scale(0.8);
+}
+
+.box1 a button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  position: absolute;
+  background-color: #1f327f;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transition: 0.5s;
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+.box1 a button:hover::before {
+  transform: scaleX(1);
+}
+/* tim end */
+
+footer {
+  width: 100%;
+  height: 200px;
+  background-color: #3650b8;
+  box-shadow: 2px 2px 5px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: -15px;
+}
+
+.social-media-footer {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media-footer a {
+  color: white;
+  font-size: 1.8rem;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.social-media-footer a:hover {
+  transform: translateY(-5px);
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: white;
+  padding-top: 2px;
+}
+footer ul li a::after {
+  content: "";
+  width: 30px;
+  border-bottom: 2px solid white;
+  display: block;
+  padding-bottom: 2px;
+}
+
+footer p {
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+  margin-left: 35px;
+}
+/* Responsive */
+/* ukuran table */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+  }
+  .text h1 {
+    font-size: 4rem;
+  }
+  .text {
+    margin-top: 60px;
+  }
+  .home img {
+    width: 370px;
+    height: 370px;
+    margin-top: -150px;
+    align-self: flex-end;
+  }
+  .dekorasi {
+    display: none;
+  }
+  .dekorasi-1 {
+    width: 250px;
+    height: 250px;
+    right: 50px;
+    bottom: 10px;
+  }
+  .about {
+    flex-direction: column;
+  }
+  .about .foto img {
+    width: 330px;
+  }
+  .content-text {
+    border: none;
+  }
+}
+/* ukuran mobile */
+@media screen and (max-width: 600px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    height: 400px;
+    width: 100%;
+    background-color: #5877f1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateY(-500px);
+    transition: 1s;
+  }
+
+  nav ul.slide {
+    transform: translateY(35px);
+  }
+
+  .icon {
+    display: flex;
+  }
+
+  .social-media {
+    bottom: -70px;
+    left: 48px;
+  }
+
+  .home {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .dekorasi {
+    display: none;
+  }
+  .dekorasi-1 {
+    width: 200px;
+    height: 200px;
+    bottom: -30px;
+    right: 100px;
+  }
+
+  .text h1 {
+    line-height: 70px;
+    width: 340px;
+    margin-left: 40px;
+  }
+
+  .text {
+    align-self: center;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home .text h1 {
+    font-size: 4rem;
+  }
+
+  .home img {
+    width: 300px;
+    height: 300px;
+    align-self: center;
+    margin-top: 30px;
+  }
+
+  .about {
+    flex-direction: column;
+    margin-top: 100px;
+  }
+
+  .foto {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+  }
+
+  .about .foto img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .content-text {
+    border: none;
+  }
+
+  .content-text p {
+    line-height: 25px;
+  }
+
+  .tim h2 {
+    top: -80px;
+  }
+  .tim .box1 {
+    margin-bottom: 30px;
+  }
+}
